@@ -42,9 +42,7 @@ public class Worker {
         cfg.setDiscoverySpi(discoverySpi);
         System.out.println("start");
         try(Ignite ignite = Ignition.getOrStart(cfg)) {
-            
-            ignite.cluster.activate();
-
+       
             IgniteTransactions transactions = ignite.transactions();
 
             
