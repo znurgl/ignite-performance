@@ -1,6 +1,6 @@
 package znurgl.ignitetest.worker;
 
-import com.sun.tools.javac.util.List;
+import java.util.List;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteCache;
 import org.apache.ignite.IgniteTransactions;
