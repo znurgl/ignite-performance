@@ -57,7 +57,7 @@ public class Worker {
                     System.out.println(cache.metrics().getSize());
 
                     Map<UUID, Event> map = new ConcurrentHashMap<>();
-                    for (int i = 0; i < 1_000_000; i++) {
+                    for (int i = 0; i < 1_000; i++) {
                         map.put(UUID.randomUUID(), new Event("name" + i, Timestamp.valueOf(LocalDateTime.now()).getTime(), ""));
                     }
 
