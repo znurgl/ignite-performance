@@ -51,10 +51,9 @@ public class Worker {
             CacheConfiguration<UUID, Event> cacheCfg = new CacheConfiguration<>("transtest");
 
             try(IgniteCache<UUID, Event> cache = ignite.getOrCreateCache(cacheCfg)) {
+                Map<UUID, Event> map = new ConcurrentHashMap<>();
                 try (Transaction tx = transactions.txStart()) {
-                    //System.out.println(cache.metrics().getSize());
-
-                    Map<UUID, Event> map = new ConcurrentHashMap<>();
+                   
                     for (int i = 0; i < 1000; i++) {
                         map.put(UUID.randomUUID(), new Event("name" + i, Timestamp.valueOf(LocalDateTime.now()).getTime(), ""));
                     }
@@ -66,7 +65,8 @@ public class Worker {
 
                     //System.out.println(cache.metrics().getSize());
                 }
-                System.out.println("loaded size: " + cache.getAll().size());
+                Map<UUID, Event> resp = cache.getAll(map.keySet());
+                System.out.println("loaded: " + resp.size());
             }
         }
     }
