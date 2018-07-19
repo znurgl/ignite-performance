@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  ignite:
+    image: apacheignite/ignite:2.6.0
+    ports:
+      - 47500:47500
+      - 11211:11211
+      - 47100:47100
+      - 49112:49112
+    volumes:
+      - ./ignite:/opt/test
+    environment:
+      - CONFIG_URI=file:///opt/test/test.xml
+      - EXTERNAL_LIBS=/opt/test/assembly

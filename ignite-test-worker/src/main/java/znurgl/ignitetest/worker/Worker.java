@@ -1,0 +1,75 @@
+package znurgl.ignitetest.worker;
+
+import com.sun.tools.javac.util.List;
+import org.apache.ignite.Ignite;
+import org.apache.ignite.IgniteCache;
+import org.apache.ignite.IgniteTransactions;
+import org.apache.ignite.Ignition;
+import org.apache.ignite.client.ClientCache;
+import org.apache.ignite.configuration.CacheConfiguration;
+import org.apache.ignite.configuration.IgniteConfiguration;
+import org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi;
+import org.apache.ignite.spi.discovery.tcp.ipfinder.multicast.TcpDiscoveryMulticastIpFinder;
+import org.apache.ignite.transactions.Transaction;
+import znurgl.ignitetest.data.Event;
+
+import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Map;
+import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
+
+/**
+ * Created by Gergo Bakos (znurgl@gmail.com) on 18/07/2018.
+ */
+public class Worker {
+
+    public void load() {
+
+        IgniteConfiguration cfg = new IgniteConfiguration();
+
+        cfg.setClientMode(true);
+// Configure Ignite here.
+
+        TcpDiscoverySpi discoverySpi = new TcpDiscoverySpi();
+
+        discoverySpi.setForceServerMode(false);
+
+        TcpDiscoveryMulticastIpFinder ipfinder = new TcpDiscoveryMulticastIpFinder();
+        ipfinder.setAddresses( List.of("127.0.0.1:47500..47509") );
+
+        discoverySpi.setIpFinder(ipfinder);
+
+        cfg.setDiscoverySpi(discoverySpi);
+        System.out.println("start");
+        try(Ignite ignite = Ignition.getOrStart(cfg)) {
+
+            //IgniteTransactions transactions = ignite.transactions();
+
+            //try (Transaction tx = transactions.txStart()) {
+            System.out.println("getCache");
+            CacheConfiguration<UUID, Event> cacheCfg = new CacheConfiguration<>("transtest");
+
+            try(IgniteCache<UUID, Event> cache = ignite.getOrCreateCache(cacheCfg)) {
+                System.out.println(cache.metrics().getSize());
+
+                Map<UUID, Event> map = new ConcurrentHashMap<>();
+                for (int i = 0; i < 1_000; i++) {
+                    map.put(UUID.randomUUID(), new Event("name" + i, Timestamp.valueOf(LocalDateTime.now()).getTime(), ""));
+                }
+
+                System.out.println(cache.metrics().getSize());
+                cache.putAll(map);
+
+                //tx.commit();
+
+                System.out.println(cache.metrics().getSize());
+                //} finally {
+                //    ignite.close();
+                //}
+                ignite.close();
+            }
+        }
+    }
+}
