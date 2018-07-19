@@ -30,8 +30,7 @@ public class Worker {
 
         IgniteConfiguration cfg = new IgniteConfiguration();
 
-        //cfg.setClientMode(true);
-// Configure Ignite here.
+        cfg.setClientMode(true);
 
         TcpDiscoverySpi discoverySpi = new TcpDiscoverySpi();
 
