@@ -30,17 +30,16 @@ public class Worker {
 
         IgniteConfiguration cfg = new IgniteConfiguration();
 
-        cfg.setClientMode(true);
+        //cfg.setClientMode(true);
 
         TcpDiscoverySpi discoverySpi = new TcpDiscoverySpi();
 
         //discoverySpi.setForceServerMode(false);
 
         TcpDiscoveryMulticastIpFinder ipfinder = new TcpDiscoveryMulticastIpFinder();
+        
         ipfinder.setAddresses( Arrays.asList(
-            "crmfedv21-ife:47500..47509",
-            "crmfedv22-ife:47500..47509",
-            "sumatra:47500..47509"
+            "127.0.0.1:47500..47509"
             ));
 
         discoverySpi.setIpFinder(ipfinder);
