@@ -37,7 +37,10 @@ public class Worker {
         //discoverySpi.setForceServerMode(false);
 
         TcpDiscoveryMulticastIpFinder ipfinder = new TcpDiscoveryMulticastIpFinder();
-        ipfinder.setAddresses( Arrays.asList("127.0.0.1:47500..47509") );
+        ipfinder.setAddresses( Arrays.asList(
+            "crmfedv21-ife:47500..47509",
+            "crmfedv22-ife:47500..47509"
+            ));
 
         discoverySpi.setIpFinder(ipfinder);
 
