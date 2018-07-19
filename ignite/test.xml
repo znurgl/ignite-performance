@@ -37,12 +37,23 @@
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="ignite.cfg" class="org.apache.ignite.configuration.IgniteConfiguration">
+      
+        <property name="dataStorageConfiguration">
+    <bean class="org.apache.ignite.configuration.DataStorageConfiguration">
+      <property name="defaultDataRegionConfiguration">
+        <bean class="org.apache.ignite.configuration.DataRegionConfiguration">
+          <property name="persistenceEnabled" value="true"/>
+        </bean>
+      </property>
+    </bean>
+  </property>
+      
         <property name="cacheConfiguration">
             <list>
                 <!-- Partitioned cache example configuration (Atomic mode). -->
                 <bean class="org.apache.ignite.configuration.CacheConfiguration">
                     <property name="name" value="transtest"/>
-                    <property name="atomicityMode" value="ATOMIC"/>
+                    <property name="atomicityMode" value="TRANSACTIONAL"/>
                     <property name="backups" value="1"/>
                 </bean>
             </list>
