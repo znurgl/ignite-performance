@@ -1,6 +1,5 @@
 package znurgl.ignitetest.worker;
 
-import java.util.List;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteCache;
 import org.apache.ignite.IgniteTransactions;
@@ -16,8 +15,7 @@ import znurgl.ignitetest.data.Event;
 import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -37,7 +35,7 @@ public class Worker {
         discoverySpi.setForceServerMode(false);
 
         TcpDiscoveryMulticastIpFinder ipfinder = new TcpDiscoveryMulticastIpFinder();
-        ipfinder.setAddresses( List.of("127.0.0.1:47500..47509") );
+        ipfinder.setAddresses( Arrays.asList("127.0.0.1:47500..47509") );
 
         discoverySpi.setIpFinder(ipfinder);
 
