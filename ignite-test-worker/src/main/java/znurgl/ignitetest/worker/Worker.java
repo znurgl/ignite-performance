@@ -39,7 +39,8 @@ public class Worker {
         TcpDiscoveryMulticastIpFinder ipfinder = new TcpDiscoveryMulticastIpFinder();
         ipfinder.setAddresses( Arrays.asList(
             "crmfedv21-ife:47500..47509",
-            "crmfedv22-ife:47500..47509"
+            "crmfedv22-ife:47500..47509",
+            "sumatra:47500..47509"
             ));
 
         discoverySpi.setIpFinder(ipfinder);
