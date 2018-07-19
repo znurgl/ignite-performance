@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="61ca7686-81e3-42e6-8057-aad2876145a1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/ignite-test-worker/src/main/java/znurgl/ignitetest/worker/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/ignite-test-worker/src/main/java/znurgl/ignitetest/worker/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ignite/test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ignite/test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ignitetest.iws" beforeDir="false" afterPath="$PROJECT_DIR$/ignitetest.iws" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,8 +47,8 @@
       <file leaf-file-name="Worker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ignite-test-worker/src/main/java/znurgl/ignitetest/worker/Worker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="47" column="57" lean-forward="true" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
+            <state relative-caret-position="326">
+              <caret line="54" column="89" selection-start-line="54" selection-start-column="89" selection-end-line="54" selection-end-column="89" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -397,12 +395,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WorkerTest - 2018.07.19 at 05h 31m 45s.xml">
-      <configuration name="WorkerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WorkerTest - 2018.07.19 at 05h 32m 20s.xml">
-      <configuration name="WorkerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="WorkerTest - 2018.07.19 at 05h 33m 06s.xml">
       <configuration name="WorkerTest" configurationId="JUnit" />
     </history-entry>
@@ -425,6 +417,12 @@
       <configuration name="WorkerTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="WorkerTest - 2018.07.19 at 05h 43m 43s.xml">
+      <configuration name="WorkerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WorkerTest - 2018.07.19 at 05h 46m 15s.xml">
+      <configuration name="WorkerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WorkerTest - 2018.07.19 at 05h 50m 27s.xml">
       <configuration name="WorkerTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -564,8 +562,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ignite-test-worker/src/main/java/znurgl/ignitetest/worker/Worker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="47" column="57" lean-forward="true" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
+        <state relative-caret-position="326">
+          <caret line="54" column="89" selection-start-line="54" selection-start-column="89" selection-end-line="54" selection-end-column="89" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -47,10 +47,12 @@ public class Worker {
                         map.put(UUID.randomUUID(), new Event("name" + i, Timestamp.valueOf(LocalDateTime.now()).getTime(), ""));
                     }
 
-                    ignite.log().info("cache size before: " + cache.metrics().getSize());
+                    //ignite.log().info("cache size before: " + cache.metrics().getSize());
+                    System.out.println("cache size before: " + cache.metrics().getSize());
                     cache.putAll(map);
                     tx.commit();
-                    ignite.log().info("cache size after: " + cache.metrics().getSize());
+                    //ignite.log().info("cache size after: " + cache.metrics().getSize());
+                    System.out.println("cache size after: " + cache.metrics().getSize());
                 }
             }
         }
