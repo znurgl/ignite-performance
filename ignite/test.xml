@@ -53,7 +53,7 @@
                 <!-- Partitioned cache example configuration (Atomic mode). -->
                 <bean class="org.apache.ignite.configuration.CacheConfiguration">
                     <property name="name" value="transtest"/>
-                    <property name="atomicityMode" value="ATOMIC"/>
+                    <property name="atomicityMode" value="TRANSACTIONAL"/>
                     <property name="backups" value="1"/>
                 </bean>
             </list>
