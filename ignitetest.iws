@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61ca7686-81e3-42e6-8057-aad2876145a1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ignite-test-data/ignitetestdata.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ignite-test-data/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ignite-test-data/src/main/java/znurgl/ignitetest/data/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ignite-test-worker/ignitetestworker.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ignite-test-worker/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ignite-test-worker/src/main/java/znurgl/ignitetest/worker/Worker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ignite-test-worker/src/main/resources/client.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ignite-test-worker/src/test/java/znurgl/ignitetest/worker/WorkerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ignite/test.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ignite-test-worker/src/main/java/znurgl/ignitetest/worker/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/ignite-test-worker/src/main/java/znurgl/ignitetest/worker/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ignite/test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ignite/test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ignitetest.iws" beforeDir="false" afterPath="$PROJECT_DIR$/ignitetest.iws" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,12 +18,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
               <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ignite/test.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="44" column="71" selection-start-line="44" selection-start-column="71" selection-end-line="44" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -48,8 +49,8 @@
       <file leaf-file-name="Worker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ignite-test-worker/src/main/java/znurgl/ignitetest/worker/Worker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="39" column="62" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />
+            <state relative-caret-position="191">
+              <caret line="47" column="57" lean-forward="true" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,8 +113,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -239,6 +238,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -396,78 +397,103 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WorkerTest - 2018.07.18 at 21h 49m 58s.xml">
+    <history-entry file="WorkerTest - 2018.07.19 at 05h 31m 45s.xml">
       <configuration name="WorkerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WorkerTest - 2018.07.18 at 21h 52m 14s.xml">
+    <history-entry file="WorkerTest - 2018.07.19 at 05h 32m 20s.xml">
       <configuration name="WorkerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WorkerTest - 2018.07.18 at 21h 53m 37s.xml">
+    <history-entry file="WorkerTest - 2018.07.19 at 05h 33m 06s.xml">
       <configuration name="WorkerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WorkerTest - 2018.07.18 at 21h 54m 29s.xml">
+    <history-entry file="WorkerTest - 2018.07.19 at 05h 33m 52s.xml">
       <configuration name="WorkerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WorkerTest - 2018.07.18 at 22h 03m 50s.xml">
+    <history-entry file="WorkerTest - 2018.07.19 at 05h 34m 45s.xml">
       <configuration name="WorkerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WorkerTest - 2018.07.18 at 22h 04m 09s.xml">
+    <history-entry file="WorkerTest - 2018.07.19 at 05h 35m 45s.xml">
       <configuration name="WorkerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WorkerTest - 2018.07.18 at 22h 05m 53s.xml">
+    <history-entry file="WorkerTest - 2018.07.19 at 05h 37m 09s.xml">
       <configuration name="WorkerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WorkerTest - 2018.07.18 at 22h 06m 32s.xml">
+    <history-entry file="WorkerTest - 2018.07.19 at 05h 41m 28s.xml">
       <configuration name="WorkerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WorkerTest - 2018.07.18 at 22h 11m 20s.xml">
+    <history-entry file="WorkerTest - 2018.07.19 at 05h 42m 48s.xml">
       <configuration name="WorkerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WorkerTest - 2018.07.18 at 22h 13m 26s.xml">
+    <history-entry file="WorkerTest - 2018.07.19 at 05h 43m 43s.xml">
       <configuration name="WorkerTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="23" width="1400" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="bottom" id="DB Execution Console" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info id="Project Explorer" />
-      <window_info id="Job Explorer" />
-      <window_info anchor="bottom" id="Console" />
-      <window_info anchor="bottom" id="IntelliTail" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="DB Execution Console" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Project Explorer" order="2" />
+      <window_info id="Job Explorer" order="2" />
+      <window_info anchor="bottom" id="Console" order="7" />
+      <window_info anchor="bottom" id="IntelliTail" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
+      <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info id="DB Browser" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Version Control" weight="0.32948717" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32948717" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32948717" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496318" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info id="Favorites" side_tool="true" />
+      <window_info id="DB Browser" order="2" />
+      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32948717" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32948717" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32948717" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2533137" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ignite-test-worker/src/main/java/znurgl/ignitetest/worker/Worker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="62" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ignite-test-data/src/main/java/znurgl/ignitetest/data/Event.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -515,6 +541,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -525,21 +558,14 @@
     <entry file="file://$PROJECT_DIR$/ignite/test.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
-          <caret line="44" column="64" selection-start-line="44" selection-start-column="64" selection-end-line="44" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <caret line="44" column="71" selection-start-line="44" selection-start-column="71" selection-end-line="44" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ignite-test-worker/src/main/java/znurgl/ignitetest/worker/Worker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="39" column="62" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />
+        <state relative-caret-position="191">
+          <caret line="47" column="57" lean-forward="true" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
