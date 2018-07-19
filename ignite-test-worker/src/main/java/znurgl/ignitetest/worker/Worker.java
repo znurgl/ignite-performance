@@ -22,6 +22,10 @@ import java.util.concurrent.ConcurrentHashMap;
  * Created by Gergo Bakos (znurgl@gmail.com) on 18/07/2018.
  */
 public class Worker {
+    
+    public static void main(String[] args) {
+        new Worker().load();
+    }
 
     public void load() {
 
