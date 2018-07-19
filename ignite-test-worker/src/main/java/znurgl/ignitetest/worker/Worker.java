@@ -43,7 +43,7 @@ public class Worker {
         System.out.println("start");
         try(Ignite ignite = Ignition.getOrStart(cfg)) {
 
-            //IgniteTransactions transactions = ignite.transactions();
+            IgniteTransactions transactions = ignite.transactions();
 
             
             CacheConfiguration<UUID, Event> cacheCfg = new CacheConfiguration<>("transtest");
