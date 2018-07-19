@@ -27,12 +27,12 @@ public class Worker {
 
         IgniteConfiguration cfg = new IgniteConfiguration();
 
-        cfg.setClientMode(true);
+        //cfg.setClientMode(true);
 // Configure Ignite here.
 
         TcpDiscoverySpi discoverySpi = new TcpDiscoverySpi();
 
-        discoverySpi.setForceServerMode(false);
+        //discoverySpi.setForceServerMode(false);
 
         TcpDiscoveryMulticastIpFinder ipfinder = new TcpDiscoveryMulticastIpFinder();
         ipfinder.setAddresses( Arrays.asList("127.0.0.1:47500..47509") );
@@ -45,11 +45,11 @@ public class Worker {
 
             //IgniteTransactions transactions = ignite.transactions();
 
-            //try (Transaction tx = transactions.txStart()) {
-            System.out.println("getCache");
+            
             CacheConfiguration<UUID, Event> cacheCfg = new CacheConfiguration<>("transtest");
 
             try(IgniteCache<UUID, Event> cache = ignite.getOrCreateCache(cacheCfg)) {
+                try (Transaction tx = transactions.txStart()) {
                 System.out.println(cache.metrics().getSize());
 
                 Map<UUID, Event> map = new ConcurrentHashMap<>();
@@ -60,7 +60,7 @@ public class Worker {
                 System.out.println(cache.metrics().getSize());
                 cache.putAll(map);
 
-                //tx.commit();
+                tx.commit();
 
                 System.out.println(cache.metrics().getSize());
                 //} finally {
