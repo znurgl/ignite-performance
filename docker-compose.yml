@@ -2,7 +2,7 @@ version: '3'
 
 services:
   ignite:
-    image: apacheignite/ignite:2.6.0
+    image: apacheignite/ignite:2.4.0
     ports:
       - 47500:47500
       - 11211:11211
