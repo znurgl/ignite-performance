@@ -50,23 +50,24 @@ public class Worker {
 
             try(IgniteCache<UUID, Event> cache = ignite.getOrCreateCache(cacheCfg)) {
                 try (Transaction tx = transactions.txStart()) {
-                System.out.println(cache.metrics().getSize());
+                    System.out.println(cache.metrics().getSize());
 
-                Map<UUID, Event> map = new ConcurrentHashMap<>();
-                for (int i = 0; i < 1_000; i++) {
-                    map.put(UUID.randomUUID(), new Event("name" + i, Timestamp.valueOf(LocalDateTime.now()).getTime(), ""));
+                    Map<UUID, Event> map = new ConcurrentHashMap<>();
+                    for (int i = 0; i < 1_000; i++) {
+                        map.put(UUID.randomUUID(), new Event("name" + i, Timestamp.valueOf(LocalDateTime.now()).getTime(), ""));
+                    }
+
+                    System.out.println(cache.metrics().getSize());
+                    cache.putAll(map);
+
+                    tx.commit();
+
+                    System.out.println(cache.metrics().getSize());
+                    //} finally {
+                    //    ignite.close();
+                    //}
+                    ignite.close();
                 }
-
-                System.out.println(cache.metrics().getSize());
-                cache.putAll(map);
-
-                tx.commit();
-
-                System.out.println(cache.metrics().getSize());
-                //} finally {
-                //    ignite.close();
-                //}
-                ignite.close();
             }
         }
     }
