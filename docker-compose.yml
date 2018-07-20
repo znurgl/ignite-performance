@@ -13,4 +13,4 @@ services:
       - ./ignite:/opt/test
     environment:
       - CONFIG_URI=file:///opt/test/test.xml
-      - EXTERNAL_LIBS=/opt/test/assembly
+      - USER_LIBS=/opt/test/assembly
