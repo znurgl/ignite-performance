@@ -8,6 +8,7 @@ services:
       - 11211:11211
       - 47100:47100
       - 49112:49112
+    net: host
     volumes:
       - ./ignite:/opt/test
     environment:
