@@ -46,12 +46,6 @@
                     <property name="cacheMode" value="REPLICATED"/>
                     <property name="backups" value="1"/>
                     <property name="writeSynchronizationMode" value="FULL_ASYNC"/>
-                    <property name="indexedTypes">
-                        <list>
-                            <value>java.util.UUID</value>
-                            <value>znurgl.ignitetest.data.Event</value>
-                        </list>
-                    </property>
                 </bean>
             </list>
         </property>
