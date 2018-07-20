@@ -35,14 +35,18 @@ public class Worker {
 
     public void load() {
 
+        System.out.println("Ignite client is starting...");
         try(Ignite ignite = Ignition.start(mIgniteConfigFile)) {
-
+            System.out.println("done");
+            System.out.println("Get transaction...");
             IgniteTransactions transactions = ignite.transactions();
+            System.out.println("done");
 
-
+            System.out.println("Get cache");
             CacheConfiguration<UUID, Event> cacheCfg = new CacheConfiguration<>(cacheName);
 
             try(IgniteCache<UUID, Event> cache = ignite.getOrCreateCache(cacheCfg)) {
+                System.out.println("done");
                 Map<UUID, Event> map = new ConcurrentHashMap<>();
                 try (Transaction tx = transactions.txStart()) {
 
@@ -50,8 +54,12 @@ public class Worker {
                         map.put(UUID.randomUUID(), new Event("name" + i, Timestamp.valueOf(LocalDateTime.now()).getTime(), ""));
                     }
 
+                    System.out.println("Insert objects");
                     cache.putAll(map);
+                    System.out.println("done");
+                    System.out.println("Commit transaction");
                     tx.commit();
+                    System.out.println("done");
 
                 }
                 Map<UUID, Event> resp = cache.getAll(map.keySet());
