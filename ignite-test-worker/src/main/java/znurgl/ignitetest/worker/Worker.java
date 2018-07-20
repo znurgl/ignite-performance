@@ -22,51 +22,37 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class Worker {
 
+    private static String mIgniteConfigFile;
+    private static String cacheName;
+    private static Integer load;
+
     public static void main(String[] args) {
+        mIgniteConfigFile = args[0];
+        cacheName =  args[1];
+        load = Integer.valueOf(args[2]);
         new Worker().load();
     }
 
     public void load() {
 
-        IgniteConfiguration cfg = new IgniteConfiguration();
-
-        //cfg.setClientMode(true);
-
-        TcpDiscoverySpi discoverySpi = new TcpDiscoverySpi();
-
-        //discoverySpi.setForceServerMode(false);
-
-        TcpDiscoveryMulticastIpFinder ipfinder = new TcpDiscoveryMulticastIpFinder();
-
-        ipfinder.setAddresses( Arrays.asList(
-            "127.0.0.1:47500..47509"
-            ));
-
-        discoverySpi.setIpFinder(ipfinder);
-
-        cfg.setDiscoverySpi(discoverySpi);
-        System.out.println("start");
-        try(Ignite ignite = Ignition.getOrStart(cfg)) {
+        try(Ignite ignite = Ignition.start(mIgniteConfigFile)) {
 
             IgniteTransactions transactions = ignite.transactions();
 
 
-            CacheConfiguration<UUID, Event> cacheCfg = new CacheConfiguration<>("transtest");
+            CacheConfiguration<UUID, Event> cacheCfg = new CacheConfiguration<>(cacheName);
 
             try(IgniteCache<UUID, Event> cache = ignite.getOrCreateCache(cacheCfg)) {
                 Map<UUID, Event> map = new ConcurrentHashMap<>();
                 try (Transaction tx = transactions.txStart()) {
 
-                    for (int i = 0; i < 1000; i++) {
+                    for (int i = 0; i < load; i++) {
                         map.put(UUID.randomUUID(), new Event("name" + i, Timestamp.valueOf(LocalDateTime.now()).getTime(), ""));
                     }
 
-                    //System.out.println(cache.metrics().getSize());
                     cache.putAll(map);
-
                     tx.commit();
 
-                    //System.out.println(cache.metrics().getSize());
                 }
                 Map<UUID, Event> resp = cache.getAll(map.keySet());
                 System.out.println("loaded: " + resp.size());
