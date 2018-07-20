@@ -2,15 +2,18 @@ version: '3'
 
 services:
   ignite:
-    image: apacheignite/ignite:2.4.0
-    ports:
-      - 47500:47500
-      - 11211:11211
-      - 47100:47100
-      - 49112:49112
-    network_mode: host
+    image: apacheignite/ignite:2.6.0
+    container_name: ignite-node
     volumes:
       - ./ignite:/opt/test
     environment:
       - CONFIG_URI=file:///opt/test/test.xml
       - USER_LIBS=/opt/test/assembly
+    command: sh /opt/test/start-ignite.sh
+  app:
+    image: openjdk:8
+    container_name: ignite_client
+    volumes:
+      - ./ignite-test-worker/target:/opt/assembly
+      - ./ignite:/opt/test
+    command: java -jar /opt/assembly/ignite-test-worker-1.0-SNAPSHOT-jar-with-dependencies.jar /opt/test/client.xml test 100000
